@@ -1,0 +1,109 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+ #content-header {
+    background: #2a8dd4;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; 
+    overflow: hidden;
+}
+
+#content-main {
+    background: #fff;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto; 
+}
+
+.padding {
+    padding: 15px;
+}
+
+#apply-profile{
+    margin-top: 0.5em;
+}
+
+.ms-Pivot-link{
+    width: calc((100% - 50px)/2);
+}
+
+.profile-preferences-section{
+    border: 1px solid #c8c8c8;
+    /* margin-top: 0.5em; */
+}
+.ms-Button, .ms-TextField-field, .profile-preferences-section{
+    border-radius: 5px;
+}
+
+.preference-value{
+    font-weight: bold;
+}
+
+.profile-preferences-section:first-of-type ul{
+    padding-left: 30px;
+}
+
+.profile-buttons button{
+    display: block;
+    margin:0.5em auto;
+    width: 150px;
+}
+
+.profile-section{
+    display: none;
+}
+
+.back-button{
+    cursor: pointer;
+}
+
+.back-button .ms-Button{
+    padding: 0;
+    height: unset;
+    min-width: unset;
+    width: 22px;
+}
+
+.back-button h3{
+    display:inline-block;
+    margin: 0;
+}
+
+.profile-preferences-section:not(:first-of-type){
+    padding: 0.5em 0.2em;
+    margin-bottom: 0.5em;
+}
+
+.table-container{
+    border-radius: 5px;
+    border: 1px solid #c8c8c8;
+    margin-top:0.5em;
+    padding: 0.2em;
+}
+
+.table-container table{
+    width: 100%;
+}
+
+.btn-deleteprofile{
+    background: #FF7588 !important;
+    color:white !important;
+    border: none;
+}
+
+.btn-deleteprofile:hover{
+    background: #FF8A9A !important;
+}
+
+.btn-deleteprofile:active{
+    background:  #FF586B !important;
+}
