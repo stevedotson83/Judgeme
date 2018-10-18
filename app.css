@@ -67,7 +67,7 @@
 }
 
 .back-button .ms-Button{
-    padding: 0;
+    padding: 3px 0 0 0;
     height: unset;
     min-width: unset;
     width: 22px;
@@ -78,7 +78,7 @@
     margin: 0;
 }
 
-.profile-preferences-section:not(:first-of-type){
+.profile-preferences-section{
     padding: 0.5em 0.2em;
     margin-bottom: 0.5em;
 }
@@ -106,4 +106,24 @@
 
 .btn-deleteprofile:active{
     background:  #FF586B !important;
+}
+
+.error-message{
+    color: #FF586B;
+    font-weight: bold;
+    display: none;
+}
+
+.notification-message{
+    color: green;
+    font-weight: bold;
+    display: none;
+}
+
+.profile-preferences-section label{
+    display: block;
+}
+
+.delete-profiles-table tbody tr td:nth-of-type(2){
+    text-align: right;
 }

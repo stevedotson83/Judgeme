@@ -24,7 +24,7 @@
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/hi-res-icon.png"/>
 
   <!--If you plan to submit this add-in to the Office Store, uncomment the SupportUrl element below-->
-  <!--<SupportUrl DefaultValue="[Insert the URL of a page that provides support information for the app]">-->
+  <SupportUrl DefaultValue="[Insert the URL of a page that provides support information for the app]">
 
   <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
   <AppDomains>
@@ -130,14 +130,14 @@
       </bt:Urls>
       <!-- ShortStrings max characters==125. -->
       <bt:ShortStrings>
-        <bt:String id="Contoso.TaskpaneButton.Label" DefaultValue="Show Taskpane" />
+        <bt:String id="Contoso.TaskpaneButton.Label" DefaultValue="JudgeMe" />
         <bt:String id="Contoso.Group1Label" DefaultValue="Commands Group" />
-        <bt:String id="Contoso.GetStarted.Title" DefaultValue="Get started with your sample add-in!" />
+        <bt:String id="Contoso.GetStarted.Title" DefaultValue="Get started with JudgeMe add-in for Word" />
       </bt:ShortStrings>
       <!-- LongStrings max characters==250. -->
       <bt:LongStrings>
-        <bt:String id="Contoso.TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane" />
-        <bt:String id="Contoso.GetStarted.Description" DefaultValue="Your sample add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started." />
+        <bt:String id="Contoso.TaskpaneButton.Tooltip" DefaultValue="Click to Start JudgeMe" />
+        <bt:String id="Contoso.GetStarted.Description" DefaultValue="JudgeMe add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started." />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

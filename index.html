@@ -34,6 +34,8 @@
     </div>
     <div id="content-main">
         <div class="padding">
+
+            <!-- NAVBAR -->
             <div class="ms-Pivot ms-Pivot--tabs">
                 <ul class="ms-Pivot-links">
                     <li class="ms-Pivot-link is-selected" data-content="apply" title="Apply Profile Preferences"
@@ -44,28 +46,50 @@
                         Profiles
                     </li>
                 </ul>
+
+                <!-- APPLY PROFILE PREFERENCES TAB -->
                 <div class="ms-Pivot-content apply-tab" data-content="apply">
                     <label class="ms-Label">Profile Name</label>
-                    <select name="" id="select-profile" class="ms-TextField-field">
-                        <option value="1">Profile 1</option>
-                        <option value="2">Profile 2</option>
-                        <option value="3">Profile 3</option>
-                        <option value="4">Profile 4</option>
+                    <label class="error-message ms-Label">Please Select a Profile</label>
+                    <select name="" id="home-select-profile" class="ms-TextField-field">
                     </select>
                     <label class="ms-Label">Preferences</label>
-                    <div class="profile-preferences-section">
-                        <ul>
-                            <li class="ms-Listitem">Font Style : <span class="preference-value">Arial</span></li>
-                            <li class="ms-Listitem">Text Align : <span class="preference-value">Left</span></li>
-                            <li class="ms-Listitem">Sentence Spacing : <span class="preference-value">Single Space</span></li>
-                            <li class="ms-Listitem">Case Names : <span class="preference-value">Italic</span></li>
-                            <li class="ms-Listitem">Case Names Parentheses : <span class="preference-value">True</span></li>
-                        </ul>
+
+                    <!-- PREFERENCES SECTION -->
+                    <div class="profile-preferences-section apply-section">
+                        <label>
+                            <input type="checkbox" target="pref1" class="check-Pref" disabled>Font Style :
+                            <span class="preference-value"> Arial</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" target="pref2" class="check-Pref" disabled>Text Align :
+                            <span class="preference-value"> Left</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" target="pref3" class="check-Pref" disabled>Sentence Spacing :
+                            <span class="preference-value"> Single Space</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" target="pref4" class="check-Pref" disabled>Case Names :
+                            <span class="preference-value"> Italic</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" target="pref5" class="check-Pref" disabled>Case Names Parentheses :
+                            <span class="preference-value"> True</span>
+                        </label>
+                        <!-- NEW PREFERENCE -->
+                        <!-- <label>
+                            <input type="checkbox" target="pref6" class="check-Pref" disabled>New Pref Name :
+                            <span class="preference-value"> New Pref Value</span>
+                        </label> -->
                     </div>
-                    <button class="ms-Button ms-Button--primary" id="apply-profile">
+                    <button class="ms-Button ms-Button--primary" id="apply-profile" title="Apply Selected Profile Preferences to the Document">
                         <span class="ms-Button-label">Apply Profile Preferences</span>
                     </button>
+                    <label class="notification-message ms-Label">Applied...</label>
                 </div>
+
+                <!-- MANAGE PREFERENCES TAB -->
                 <div class="ms-Pivot-content profile-tab" data-content="profiles">
                     <div class="profile-buttons">
                         <button class="ms-Button ms-Button--primary" data-target="#make-profile-tab">
@@ -78,107 +102,116 @@
                             <span class="ms-Button-label">Delete Profile</span>
                         </button>
                     </div>
+
+                    <!-- MAKE NEW PROFILE SECTION -->
                     <div class="profile-sections">
                         <div class="profile-section" id="make-profile-tab">
                             <div class="back-button">
                                 <button class="ms-Button ms-Button--primary">
-                                    <span class="ms-Button-label">
-                                        <</span> </button> <h3>Make a New Profile</h3>
+                                    <i class="ms-Icon ms-Icon--ChromeBack ms-Button-label" aria-hidden="true"></i>
+                                </button>
+                                <h3>Make a New Profile</h3>
                             </div>
                             <label for="" class="ms-Label">Profile Name</label>
-                            <input type="text" class="ms-TextField-field">
+                            <label class="error-message ms-Label">Please Enter a Profile Name</label>
+                            <input type="text" class="ms-TextField-field" id="txt-newprofile-name">
                             <label class="ms-Label">Preferences:</label>
-                            <div class="profile-preferences-section">
-                                <ul class="ms-List">
-                                    <li class="ms-Listitem">
-                                        <label><input type="checkbox" name="vehicle1" value="1">Font Style : <span class="preference-value">Arial</span></label><br>
-                                    </li>
-                                    <li class="ms-Listitem">
-                                        <label><input type="checkbox" name="vehicle1" value="Bike">Text Align : <span class="preference-value">Left</span></label><br>
-                                    </li>
-                                    <li class="ms-Listitem">
-                                        <label><input type="checkbox" name="vehicle1" value="Bike">Sentence Spacing :
-                                            <span class="preference-value">Single
-                                            Space</span></label><br>
-                                    </li>
-                                    <li class="ms-Listitem">
-                                        <label><input type="checkbox" name="vehicle1" value="Bike">Case Names : <span class="preference-value">Italic</span></label><br>
-                                    </li>
-                                    <li class="ms-Listitem">
-                                        <label><input type="checkbox" name="vehicle1" value="Bike">Case Name
-                                            Parentheses :
-                                            <span class="preference-value">True</span></label><br>
-                                    </li>
-                                    <!-- <li class="ms-Listitem">Case Names Parentheses: <span class="preference-value">True</span></li> -->
-                                </ul>
+
+                            <!-- PREFERENCES SECTION -->
+                            <div class="profile-preferences-section add-section">
+                                <label>
+                                    <input type="checkbox" name="pref1" class="check-Pref">Font Style :
+                                    <span class="preference-value"> Arial</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="pref2" class="check-Pref">Text Align :
+                                    <span class="preference-value"> Left</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="pref3" class="check-Pref">Sentence Spacing :
+                                    <span class="preference-value"> Single Space</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="pref4" class="check-Pref">Case Names :
+                                    <span class="preference-value"> Italic</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="pref5" class="check-Pref">Case Name Parentheses :
+                                    <span class="preference-value"> True</span>
+                                </label>
+                                <!-- NEW PREFERENCE -->
+                                <!-- <label>
+                                    <input type="checkbox" name="pref6" class="check-Pref">New Pref Name :
+                                    <span class="preference-value"> New Pref Value</span>
+                                </label> -->
                             </div>
-                            <button class="ms-Button ms-Button--primary" id="make-profile">
+                            <button class="ms-Button ms-Button--primary" id="btn-new-profile" title="Make a New Profile">
                                 <span class="ms-Button-label">Make Profile</span>
                             </button>
+                            <label class="notification-message ms-Label">New Profile Created</label>
                         </div>
+
+                        <!-- MODIFY PROFILE SECTION -->
                         <div class="profile-section" id="edit-profile-tab">
                             <div class="back-button">
                                 <button class="ms-Button ms-Button--primary">
-                                    <span class="ms-Button-label">
-                                        <</span> </button> <h3>Modify a Profile</h3>
+                                    <i class="ms-Icon ms-Icon--ChromeBack ms-Button-label" aria-hidden="true"></i>
+                                </button>
+                                <h3>Modify a Profile</h3>
                             </div>
                             <label for="" class="ms-Label">Select a Profile</label>
-                            <select name="" id="" class="ms-TextField-field">
-                                <option value="1">Profile 1</option>
-                                <option value="2">Profile 2</option>
+                            <label class="error-message ms-Label">Please Enter a Profile Name</label>
+                            <select name="" class="ms-TextField-field" id="modify-select-profile">
                             </select>
                             <label class="ms-Label">Preferences</label>
-                            <div class="profile-preferences-section">
-                                <ul class="ms-List">
-                                    <li class="ms-Listitem">
-                                        <label><input type="checkbox" name="vehicle1" value="1" checked>Font Style
-                                            : <span class="preference-value">Arial</span></label><br>
-                                    </li>
-                                    <li class="ms-Listitem">
-                                        <label><input type="checkbox" name="vehicle1" value="2" checked>Text Align
-                                            : <span class="preference-value">Left</span></label><br>
-                                    </li>
-                                    <li class="ms-Listitem">
-                                        <label><input type="checkbox" name="vehicle1" value="3" checked>Sentence
-                                            Spacing : <span class="preference-value">Single
-                                            Space</span></label><br>
-                                    </li>
-                                    <li class="ms-Listitem">
-                                        <label><input type="checkbox" name="vehicle1" value="4" checked>Case Names
-                                            : <span class="preference-value">Italic</span></label><br>
-                                    </li>
-                                    <li class="ms-Listitem">
-                                        <label><input type="checkbox" name="vehicle1" value="5" checked>Case Name
-                                            Parentheses :
-                                            <span class="preference-value">True</span></label><br>
-                                    </li>
-                                    <!-- <li class="ms-Listitem">Case Names Parentheses: <span class="preference-value">True</span></li> -->
-                                </ul>
-                            </div>
-                            <button class="ms-Button ms-Button--primary" id="edit-profile">
-                                <span class="ms-Button-label">Modify Profile</span>
-                            </button>
 
+                            <!-- PREFERENCES SECTION -->
+                            <div class="profile-preferences-section modify-section">
+                                <label>
+                                    <input type="checkbox" name="pref1" class="check-Pref">Font Style :
+                                    <span class="preference-value"> Arial</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="pref2" class="check-Pref">Text Align :
+                                    <span class="preference-value"> Left</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="pref3" class="check-Pref">Sentence Spacing :
+                                    <span class="preference-value"> Single Space</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="pref4" class="check-Pref">Case Names :
+                                    <span class="preference-value"> Italic</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="pref5" class="check-Pref">Case Name Parentheses :
+                                    <span class="preference-value"> True</span>
+                                </label>
+                                <!-- NEW PREFERENCE -->
+                                <!-- <label>
+                                    <input type="checkbox" name="pref6" class="check-Pref">New Pref Name :
+                                    <span class="preference-value"> New Pref Value</span>
+                                </label> -->
+                            </div>
+                            <button class="ms-Button ms-Button--primary" id="btn-edit-profile" title="Save Changed to selected Profile">
+                                <span class="ms-Button-label">Save Changes</span>
+                            </button>
+                            <label class="notification-message ms-Label">Profile Modified</label>
                         </div>
+
+                        <!-- DELETE PROFILE SECTION -->
                         <div class="profile-section" id="delete-profile-tab">
                             <div class="back-button">
                                 <button class="ms-Button ms-Button--primary">
-                                    <span class="ms-Button-label">
-                                        <</span> </button> <h3>Delete a profile</h3>
+                                    <i class="ms-Icon ms-Icon--ChromeBack ms-Button-label" aria-hidden="true"></i>
+                                </button> 
+                                <h3>Delete a profile</h3>
                             </div>
                             <div class="table-container">
-                                <table>
+                                <table class="delete-profiles-table">
                                     <col width="50%">
                                     <col width="50%">
                                     <tbody>
-                                        <tr>
-                                            <td>Profile 1</td>
-                                            <td><button class="ms-Button btn-deleteprofile">Delete</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Profile 2</td>
-                                            <td><button class="ms-Button btn-deleteprofile">Delete</button></td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -189,6 +222,7 @@
         </div>
     </div>
 
+    <!-- SCRIPTS -->
     <script type="text/javascript" src="node_modules/core-js/client/core.js"></script>
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
